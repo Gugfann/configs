@@ -1,0 +1,81 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "f7",
+        "command": "workbench.action.tasks.runTask",
+        "args": "catkin build"
+    },
+    {
+        "key": "ctrl+f7",
+        "command": "workbench.action.tasks.runTask",
+        "args": "catkin clean"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.tasks.runTask",
+        "args": "catkin build tests"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_6",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_7",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_6",
+        "command": "workbench.action.nextEditor",
+        "when": "editorFocus || inputFocus && !terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_7",
+        "command": "workbench.action.previousEditor",
+        "when": "editorFocus || inputFocus && !terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+oem_6",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+shift+oem_7",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus"
+    }
+]
