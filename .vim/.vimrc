@@ -27,6 +27,7 @@ syntax on
 set nu
 set noerrorbells
 set visualbell
+set relativenumber
 
 set tabstop=4
 set shiftwidth=4
@@ -60,7 +61,7 @@ let mapleader = " "
 
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :NERDTreeFind<CR>
-nnoremap <silent> <leader>f :FZF<cr>
+noremap <C-P> :FZF<CR>
 
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
