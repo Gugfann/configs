@@ -1,0 +1,19 @@
+{
+    "editor.lineNumbers": "relative",
+    "keyboard.dispatch": "keyCode",
+    "vim.handleKeys": {
+        "<C-f>": false,
+        "<C-k>": false,
+        "<C-w>": false,
+        "<C-x>": false,
+        "<C-b>": false,
+        "<C-y>": false,
+        "<C-z>": false,
+        "<C-a>": false,
+        "<C-j>": false,
+        "<C-c>": false,
+        "<a-o>": false
+    },
+    "vim.useSystemClipboard": false,
+    "files.trimTrailingWhitespace": true
+}
