@@ -71,6 +71,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdtree'
+  Plug 'cdelledonne/vim-cmake'
   "Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-surround'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -81,6 +82,8 @@ call plug#begin()
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'blueyed/vim-diminactive'
   Plug 'stevearc/dressing.nvim'               " prettier boxes like on rename
+  Plug 'airblade/vim-rooter'
+  "Plug 'jamestthompson3/nvim-remote-containers'
   if has("vim-8.2.1978") || has("nvim")
     Plug 'psliwka/vim-smoothie'
   endif
@@ -131,8 +134,7 @@ set encoding=utf-8
 
 set laststatus=2
 
-
- autocmd TermOpen * setlocal nonumber norelativenumber
+autocmd TermOpen * setlocal nonumber norelativenumber
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -177,7 +179,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
   let g:airline_mode_map['ic'] = 'INSERT'
   " display all buffers if one tab open
   let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#tab_nr_type = 1  " buffer/tab number
+  let g:airline#extensions#tabline#tab_nr_type = 2  " buffer/tab number
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   " how file paths are shown (they're not)
   let g:airline#extensions#tabline#fnamemod = ':t'
