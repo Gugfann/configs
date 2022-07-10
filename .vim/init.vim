@@ -103,11 +103,11 @@ let NERDTreeWinSize = 31        " Set panel width to 31 columns
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F3> :NERDTreeFind<CR>
 
-nnoremap <F5> :buffers<CR>:buffer<Space>
-
 nnoremap ø :bp<cr>
 nnoremap å :bn<cr>
 nnoremap <c-k><c-w> :bd<cr>
+
+nnoremap <c-k><c-k> :CocCommand clangd.switchSourceHeader<cr>
 
 " Create default mappings
 let g:NERDCreateDefaultMappings = 0
