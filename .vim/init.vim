@@ -104,6 +104,10 @@ nmap <F3> :NERDTreeFind<CR>
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
+nnoremap ø :bp<cr>
+nnoremap å :bn<cr>
+nnoremap <c-k><c-w> :bd<cr>
+
 " Quality-of-life settings from video
 set clipboard=unnamedplus
 set showtabline=2
@@ -135,6 +139,8 @@ set encoding=utf-8
 set laststatus=2
 
 autocmd TermOpen * setlocal nonumber norelativenumber
+
+let g:rooter_patterns = ['build/', 'include/', 'src/']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
