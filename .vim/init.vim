@@ -71,6 +71,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdtree'
+  Plug 'preservim/nerdcommenter'
   Plug 'cdelledonne/vim-cmake'
   "Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-surround'
@@ -108,6 +109,22 @@ nnoremap ø :bp<cr>
 nnoremap å :bn<cr>
 nnoremap <c-k><c-w> :bd<cr>
 
+" Create default mappings
+let g:NERDCreateDefaultMappings = 0
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+map <c-k><c-c> <plug>NERDCommenterToggle
+map <c-k><c-u> <plug>NERDCommenterUncomment
+map <c-k><c-a> <plug>NERDCommenterAppend
+
+map <c-k><c-o> :e $MYVIMRC<cr>
+map <c-k><c-p> :source $MYVIMRC<cr>
+
 " Quality-of-life settings from video
 set clipboard=unnamedplus
 set showtabline=2
@@ -118,7 +135,7 @@ vnoremap > >gv
 
 " Telescope
 nnoremap <c-p> :Telescope find_files<cr>
-inoremap <c-p> :Telescope find_files<cr>
+inoremap <c-p> <esc>:Telescope find_files<cr>
 vnoremap <c-p> :Telescope find_files<cr>
 
 " Theme
