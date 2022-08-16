@@ -84,11 +84,36 @@ call plug#begin()
   Plug 'blueyed/vim-diminactive'
   Plug 'stevearc/dressing.nvim'               " prettier boxes like on rename
   Plug 'airblade/vim-rooter'
+  " Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+  "Plug 'ilyachur/cmake4vim'
   "Plug 'jamestthompson3/nvim-remote-containers'
   if has("vim-8.2.1978") || has("nvim")
     Plug 'psliwka/vim-smoothie'
   endif
 call plug#end()
+
+let mapleader = " "
+
+nnoremap <leader>sh :CocCommand clangd.switchSourceHeader<cr>
+
+nnoremap <leader>cb :CMakeBuild<cr>
+nnoremap <leader>cc :CMakeClose<cr>
+nnoremap <leader>csd :CMakeSwitch Debug<cr>
+nnoremap <leader>csr :CMakeSwitch Release<cr>
+
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+
+let g:cmake_default_config = 'Debug'
+let g:cmake_root_markers = ['.vim', 'build/', 'src/', 'include/', 'CMakeLists.txt']
+let g:cmake_build_dir_location = 'build'
+let g:cmake_generate_options = ['-G "Unix Makefiles"', '-DCONAN_DISABLE_CHECK_COMPILER=1', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON']
 
 " Get syntax files from config folder
 set runtimepath+=~/.config/nvim/syntax
@@ -107,7 +132,6 @@ nnoremap ø :bp<cr>
 nnoremap å :bn<cr>
 nnoremap <c-k><c-w> :bd<cr>
 
-nnoremap <c-k><c-k> :CocCommand clangd.switchSourceHeader<cr>
 
 " Create default mappings
 let g:NERDCreateDefaultMappings = 0
