@@ -67,7 +67,7 @@ call plug#begin()
   Plug 'sheerun/vim-polyglot'
   Plug 'rust-lang/rust.vim'
   Plug 'luochen1990/rainbow'
-  Plug 'vim-syntastic/syntastic'
+  " Plug 'vim-syntastic/syntastic'
   Plug 'morhetz/gruvbox'
   Plug 'jiangmiao/auto-pairs'
   Plug 'preservim/nerdtree'
