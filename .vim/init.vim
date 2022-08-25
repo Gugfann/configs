@@ -14,7 +14,7 @@ let $LANG = 'en_US'
 
 " ---- Basic Settings ----------------------------------------------------------
 
-set shell=powershell                        " set default shell
+" set shell=powershell                        " set default shell
 set noswapfile                                  " no swap files
 syntax enable                                   " enable syntax
 filetype plugin indent on
@@ -106,6 +106,7 @@ nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<
 inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
 inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
+
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
@@ -114,6 +115,8 @@ let g:cmake_default_config = 'Debug'
 let g:cmake_root_markers = ['.vim', 'build/', 'src/', 'include/', 'CMakeLists.txt']
 let g:cmake_build_dir_location = 'build'
 let g:cmake_generate_options = ['-G "Unix Makefiles"', '-DCONAN_DISABLE_CHECK_COMPILER=1', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON']
+
+lua require('config')
 
 " Get syntax files from config folder
 set runtimepath+=~/.config/nvim/syntax
