@@ -94,10 +94,13 @@ call plug#end()
 
 let mapleader = " "
 
+nnoremap <leader>yy "+yy
+vnoremap <leader>y "+y
 nnoremap <leader>sh :CocCommand clangd.switchSourceHeader<cr>
 
 nnoremap <leader>cb :CMakeBuild<cr>
 nnoremap <leader>cc :CMakeClose<cr>
+nnoremap <leader>cg :CMakeGenerate<cr>
 nnoremap <leader>csd :CMakeSwitch Debug<cr>
 nnoremap <leader>csr :CMakeSwitch Release<cr>
 
@@ -153,7 +156,7 @@ map <c-k><c-o> :e $MYVIMRC<cr>
 map <c-k><c-p> :source $MYVIMRC<cr>
 
 " Quality-of-life settings from video
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 set showtabline=2
 
 vnoremap < <gv

@@ -15,5 +15,23 @@
         "<a-o>": false
     },
     "vim.useSystemClipboard": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "catkin_tools.cppStandard": "c++17",
+    "git.confirmSync": false,
+    "sonarlint.rules": {
+        "cpp:S6004": {
+            "level": "off"
+        },
+        "cpp:S1709": {
+            "level": "off"
+        }
+    },
+    "terminal.integrated.shellIntegration.decorationIconSuccess": "check",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[python]": {
+    },
+    "excalidraw.theme": "auto"
 }

@@ -77,5 +77,46 @@
         "key": "ctrl+up",
         "command": "workbench.action.terminal.resizePaneUp",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+w v",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+w s",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+w c",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+shift+g t",
+        "command": "workbench.view.extension.test"
     }
 ]
