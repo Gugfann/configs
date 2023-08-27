@@ -19,6 +19,7 @@ lvim.colorscheme = "gruvbox"
 require("user.settings")
 require("user.plugins")
 require("user.keybindings")
+require("user.terminal")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
