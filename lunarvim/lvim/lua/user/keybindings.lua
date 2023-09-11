@@ -17,3 +17,4 @@
 
   -- Run script to merge compile commands from all ROS packages
   lvim.keys.normal_mode["<leader>mc"] = ':!/workspace/src/robot_master/AI-Link/build_dependencies/merge_compile_commands.sh<CR><CR>'
+  lvim.keys.normal_mode["<leader>mt"] = ':ToggleTerm<CR>'
