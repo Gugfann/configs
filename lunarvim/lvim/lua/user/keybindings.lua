@@ -15,6 +15,7 @@
   lvim.keys.normal_mode['<leader>yi{'] = '"+yi{'
   lvim.keys.normal_mode['<leader>yip'] = '"+yip'
 
-  -- Run script to merge compile commands from all ROS packages
-  lvim.keys.normal_mode["<leader>mc"] = ':!/workspace/src/robot_master/AI-Link/build_dependencies/merge_compile_commands.sh<CR><CR>'
-  lvim.keys.normal_mode["<leader>mt"] = ':ToggleTerm<CR>'
+lvim.builtin.which_key.mappings["m"] = {
+  name = "+My Keybinds",
+  t = { "<cmd>ToggleTerm<CR>", "Floating Terminal" },
+}
