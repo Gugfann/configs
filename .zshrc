@@ -63,3 +63,5 @@ eval "$(oh-my-posh init zsh --config ~/development/repos/oh-my-posh/themes/emodi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 set -o vi
+
+bindkey '^[[Z' reverse-menu-complete
