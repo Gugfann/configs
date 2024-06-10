@@ -14,6 +14,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
@@ -58,10 +60,14 @@ fi
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(oh-my-posh init zsh --config ~/development/repos/oh-my-posh/themes/emodipt-extend.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/themes/emodipt-extend.omp.json)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+. "$HOME/.cargo/env"
 
 set -o vi
+
+export EDITOR=nvim
+source ~/.shell_functions
 
 bindkey '^[[Z' reverse-menu-complete
