@@ -41,10 +41,18 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export PATH=$PATH:~/bin:~/.local/bin
 
 alias gg=lazygit
+alias lzd=lazydocker
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias ..="cd .."
+alias branches-remote="git branch --list --remote | fzf"
+alias branches="git branch --list | fzf"
+alias tags="git fetch --tags && git tag --list | fzf"
+alias ee="yazi"
+alias ff="fzf --bind 'enter:become(nvim {})'"
+#alias cat="bat"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -71,3 +79,5 @@ export EDITOR=nvim
 source ~/.shell_functions
 
 bindkey '^[[Z' reverse-menu-complete
+
+source ~/development/python/environments/python3.12/bin/activate
