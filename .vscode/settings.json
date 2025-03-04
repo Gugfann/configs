@@ -1,37 +1,128 @@
 {
-    "editor.lineNumbers": "relative",
-    "keyboard.dispatch": "keyCode",
     "vim.handleKeys": {
-        "<C-f>": false,
+
         "<C-k>": false,
-        "<C-w>": false,
-        "<C-x>": false,
-        "<C-b>": false,
-        "<C-y>": false,
-        "<C-z>": false,
-        "<C-a>": false,
-        "<C-j>": false,
         "<C-c>": false,
-        "<a-o>": false
+        "<C-b>": false,
+        "<C-v>": false,
+        "<C-f>": false,
+        "<C-i>": true,
+        "<C-p>": false,
+        "<C-j>": false,
+        "<C-y>": false,
+        "<C-h>": false
     },
-    "vim.useSystemClipboard": false,
+    "editor.lineNumbers": "relative",
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "files.exclude": {
+        "**/.git": true,
+    },
+    "editor.formatOnSaveMode": "modifications",
+    "editor.defaultFormatter": "xaver.clang-format",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+    "clang-format.executable": "clang-format-18",
+    "editor.stickyScroll.enabled": true,
+    "gitlens.ai.experimental.provider": "openai",
+    "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+    "editor.rulers": [
+        80
+    ],
+    "git.detectSubmodulesLimit": 25,
+    "editor.renderWhitespace": "all",
     "files.trimTrailingWhitespace": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.autohide": true,
+    "editor.fontFamily": "CaskaydiaMono Nerd Font",
+    "files.associations": {
+        "*.make": "makefile"
     },
-    "catkin_tools.cppStandard": "c++17",
-    "git.confirmSync": false,
+    "catppuccin.italicKeywords": false,
+    "inlineChat.showGutterIcon": true,
+    "workbench.editorLargeFileConfirmation": 20,
+    "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
+    "c-cpp-flylint.flexelint.enable": false,
+    "c-cpp-flylint.flawfinder.enable": false,
+    "c-cpp-flylint.clang.blocks": false,
+    "c-cpp-flylint.lizard.enable": false,
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.cppcheck.severityLevels": {
+        "error": "Error",
+        "warning": "Warning",
+        "style": "Information",
+        "performance": "Information",
+        "portability": "Information",
+        "information": "Information"
+    },
+    "c-cpp-flylint.enable": false,
     "sonarlint.rules": {
-        "cpp:S6004": {
+        "cpp:S4962": {
             "level": "off"
         },
         "cpp:S1709": {
             "level": "off"
+        },
+        "cpp:S107": {
+            "level": "off"
+        },
+        "cpp:S3230": {
+            "level": "off"
+        },
+        "cpp:S5025": {
+            "level": "off"
+        },
+        "cpp:S1066": {
+            "level": "off"
+        },
+        "cpp:S3458": {
+            "level": "off"
+        },
+        "cpp:S1448": {
+            "level": "off"
+        },
+        "cpp:S1820": {
+            "level": "off"
+        },
+        "cpp:S5421": {
+            "level": "off"
+        },
+        "cpp:S5827": {
+            "level": "off"
         }
     },
-    "terminal.integrated.shellIntegration.decorationIconSuccess": "check",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[python]": {
+	"git.enableSmartCommit": true,
+	"editor.trimAutoWhitespace": false,
+	"editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+    "editor.useTabStops": false,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "gitlens.views.tags.branches.layout": "list",
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "shellformat.effectLanguages": [
+
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli",
+        "bats"
+    ],
+    "http.experimental.systemCertificatesV2": true,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "terminal.integrated.scrollback": 5000,
+    "gerrit.auth.url": "gerrit",
+    "gerrit.auth.username": "kmha",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
-    "excalidraw.theme": "auto"
 }
